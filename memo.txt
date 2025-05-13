@@ -1,3 +1,6 @@
+### Next.js セットアップ
+
+```
 pnpm dlx create-next-app@latest blog-sample-front-test
 Packages: +1
 +
@@ -10,3 +13,13 @@ Progress: resolved 1, reused 0, downloaded 1, added 1, done
 ✔ Would you like to use Turbopack for `next dev`? … No / Yes
 ✔ Would you like to customize the import alias (`@/*` by default)? … No / Yes
 Creating a new Next.js app in /Users/xxx/workspace/tmp/blog-sample-front-test.
+```
+
+### Prettier インストール
+
+https://prettier.io/docs/install
+
+```
+pnpm add --save-dev --save-exact prettier
+
+```
