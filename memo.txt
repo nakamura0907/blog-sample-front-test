@@ -29,10 +29,37 @@ pnpm exec prettier . --write
 pnpm exec prettier . --check
 ```
 
+```
+{
+  "trailingComma": "es5",
+  "semi": true,
+  "singleQuote": true
+}
+```
+
 ### ES Lint連携
 
 https://nextjs.org/docs/app/api-reference/config/eslint#with-prettier
 
 ```
 pnpm add --save-dev eslint-config-prettier
+```
+
+```
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { FlatCompat } from '@eslint/eslintrc';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
+];
+
+export default eslintConfig;
 ```
