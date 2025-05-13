@@ -28,3 +28,11 @@ node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncov
 pnpm exec prettier . --write
 pnpm exec prettier . --check
 ```
+
+### ES Lint連携
+
+https://nextjs.org/docs/app/api-reference/config/eslint#with-prettier
+
+```
+pnpm add --save-dev eslint-config-prettier
+```
