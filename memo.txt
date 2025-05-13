@@ -22,4 +22,9 @@ https://prettier.io/docs/install
 ```
 pnpm add --save-dev --save-exact prettier
 
+node --eval "fs.writeFileSync('.prettierrc','{}\n')"
+node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncoverage\n')"
+
+pnpm exec prettier . --write
+pnpm exec prettier . --check
 ```
