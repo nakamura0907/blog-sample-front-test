@@ -63,3 +63,18 @@ const eslintConfig = [
 
 export default eslintConfig;
 ```
+
+### Git hooks
+
+https://prettier.io/docs/install#git-hooks
+
+https://nextjs.org/docs/app/api-reference/config/eslint#running-lint-on-staged-files
+
+```
+pnpm add --save-dev husky lint-staged
+pnpm exec husky init
+node --eval "fs.writeFileSync('.husky/pre-commit','pnpm exec lint-staged\n')"
+```
+
+> If you use ESLint, make sure lint-staged runs it before Prettier, not after.
+
