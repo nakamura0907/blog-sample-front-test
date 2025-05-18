@@ -26,5 +26,3 @@ runs:
         restore-keys: |
           ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
-    - name: Install dependencies
-      run: pnpm install

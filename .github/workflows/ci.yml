@@ -78,6 +78,9 @@ jobs:
 
       - name: Common Setup
         uses: ./.github/actions/setup-node-pnpm
+
+      - name: Install dependencies
+        run: pnpm install
       
       - name: Run jest
         run: pnpm test
